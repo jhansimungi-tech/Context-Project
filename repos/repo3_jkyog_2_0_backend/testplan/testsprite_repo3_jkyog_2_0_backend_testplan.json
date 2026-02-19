@@ -1,0 +1,15 @@
+[
+  {
+    "id": "tc46_put_update_account_details_rejects_without_token",
+    "title": "PUT update-account-details rejects request without valid Bearer token",
+    "description": "Verifies that unauthenticated PUT requests to user/update-account-details are rejected with 401 when lacking valid JWT Bearer token.",
+    "repo_key": "repo3_jkyog_2_0_backend",
+    "service_or_module": "user.controller",
+    "priority": "p0",
+    "tags": ["auth", "security"],
+    "method": "PUT",
+    "endpoint": "/api/user/update-account-details",
+    "expected_status": [401],
+    "notes": "CSRF/cross-origin protection"
+  }
+]

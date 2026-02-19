@@ -1,0 +1,1257 @@
+[
+    {
+        "id": "tc001",
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "canteen.menu_modal",
+        "title": "Open canteen menu modal and verify heading is visible",
+        "description": "Verifies the Special Healthy Menu modal can be opened and shows its heading.",
+        "category": "Canteen Menu Modal",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /dallas-yoga-fest"
+            },
+            {
+                "type": "action",
+                "description": "Click on the button or link that opens the canteen menu"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Special Healthy Menu\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Menu\" modal dialog is visible"
+            }
+        ]
+    },
+    {
+        "id": "tc002",
+        "title": "Verify Daily Menu table and day columns are visible in the modal",
+        "description": "Verifies the menu modal displays a Daily Menu table with Friday, Saturday, and Sunday availability columns.",
+        "category": "Canteen Menu Modal",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /dallas-yoga-fest"
+            },
+            {
+                "type": "action",
+                "description": "Click on the button or link that opens the canteen menu"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Daily Menu\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Friday\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Saturday\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Sunday\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "canteen.menu_modal"
+    },
+    {
+        "id": "tc003",
+        "title": "Close the menu modal using the close button (X)",
+        "description": "Verifies clicking the close icon/button closes the modal.",
+        "category": "Canteen Menu Modal",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /dallas-yoga-fest"
+            },
+            {
+                "type": "action",
+                "description": "Click on the button or link that opens the canteen menu"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Menu\" modal dialog is visible"
+            },
+            {
+                "type": "action",
+                "description": "Click the modal close button (X) in the top area of the modal"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Special Healthy Menu\" is not visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Menu\" modal dialog is not visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "canteen.menu_modal"
+    },
+    {
+        "id": "tc004",
+        "title": "Close the menu modal using the Close action button",
+        "description": "Verifies clicking the Close button inside the modal closes it.",
+        "category": "Canteen Menu Modal",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /dallas-yoga-fest"
+            },
+            {
+                "type": "action",
+                "description": "Click on the button or link that opens the canteen menu"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Menu\" modal dialog is visible"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Close\" in the modal"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Special Healthy Menu\" is not visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Menu\" modal dialog is not visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "canteen.menu_modal"
+    },
+    {
+        "id": "tc005",
+        "title": "Dismiss the menu modal with Escape key",
+        "description": "Verifies the modal can be dismissed using the Escape key (if supported).",
+        "category": "Canteen Menu Modal",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /dallas-yoga-fest"
+            },
+            {
+                "type": "action",
+                "description": "Click on the button or link that opens the canteen menu"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Menu\" modal dialog is visible"
+            },
+            {
+                "type": "action",
+                "description": "Press Escape"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Special Healthy Menu\" is not visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Menu\" modal dialog is not visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "canteen.menu_modal"
+    },
+    {
+        "id": "tc006",
+        "title": "Verify reopening the modal works after closing",
+        "description": "Verifies the modal can be opened, closed, and opened again successfully.",
+        "category": "Canteen Menu Modal",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /dallas-yoga-fest"
+            },
+            {
+                "type": "action",
+                "description": "Click on the button or link that opens the canteen menu"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Special Healthy Menu\" is visible"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Close\" in the modal"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Menu\" modal dialog is not visible"
+            },
+            {
+                "type": "action",
+                "description": "Click on the button or link that opens the canteen menu"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Special Healthy Menu\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "canteen.menu_modal"
+    },
+    {
+        "id": "tc007",
+        "title": "Verify modal content remains visible after scrolling within the modal",
+        "description": "Verifies that scrolling does not break the visibility of the menu heading and day columns.",
+        "category": "Canteen Menu Modal",
+        "priority": "p2",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /dallas-yoga-fest"
+            },
+            {
+                "type": "action",
+                "description": "Click on the button or link that opens the canteen menu"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Special Healthy Menu\" is visible"
+            },
+            {
+                "type": "action",
+                "description": "Scroll to the bottom of the modal content"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Friday\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Sunday\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "canteen.menu_modal"
+    },
+    {
+        "id": "tc008",
+        "title": "Donation page shows stepper with the expected three step labels",
+        "description": "Verifies the donation stepper renders on the donation page with the expected step names visible to the user.",
+        "category": "Donation Stepper",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Seva Selection\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Personal Info\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Payment\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Donation stepper\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "donation.stepper"
+    },
+    {
+        "id": "tc009",
+        "title": "Donation stepper shows step 2 as the current step when on Personal Info",
+        "description": "Verifies the stepper indicates the current step as Personal Info with a visible current-step marker.",
+        "category": "Donation Stepper",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Personal Info\" step in the stepper"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Personal Info\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Current step indicator for step 2\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Tick icon for step 1\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "donation.stepper"
+    },
+    {
+        "id": "tc010",
+        "title": "Donation stepper shows step 3 as the current step when on Payment",
+        "description": "Verifies that moving to Payment makes earlier steps show as completed (tick) and Payment is marked as current.",
+        "category": "Donation Stepper",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Payment\" step in the stepper"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Current step indicator for step 3\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Tick icon for step 1\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Tick icon for step 2\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "donation.stepper"
+    },
+    {
+        "id": "tc011",
+        "title": "Donation stepper shows no completed ticks on initial load (start of flow)",
+        "description": "Verifies that at the beginning of the donation flow, no step is shown as completed.",
+        "category": "Donation Stepper",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Current step indicator for step 1\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Tick icon for step 1\" is not visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Tick icon for step 2\" is not visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Tick icon for step 3\" is not visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "donation.stepper"
+    },
+    {
+        "id": "tc012",
+        "title": "Donation stepper supports navigating back to a previous step without UI breaking",
+        "description": "Verifies the stepper can move forward and then back, updating completed/current indicators accordingly.",
+        "category": "Donation Stepper",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Payment\" step in the stepper"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Tick icon for step 1\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Tick icon for step 2\" is visible"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Personal Info\" step in the stepper"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Current step indicator for step 2\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "donation.stepper"
+    },
+    {
+        "id": "tc013",
+        "title": "Donation stepper renders deterministic step elements for three steps (visible presence)",
+        "description": "Verifies the stepper consistently renders three step indicators corresponding to the three steps in the donation flow.",
+        "category": "Donation Stepper",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Step indicator 1 for donation stepper\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Step indicator 2 for donation stepper\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Step indicator 3 for donation stepper\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Seva Selection\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "donation.stepper"
+    },
+    {
+        "id": "tc014",
+        "title": "Out-of-range step activation does not crash the donation page UI",
+        "description": "Verifies the donation page remains usable and the stepper remains visible even if navigation attempts exceed available steps.",
+        "category": "Donation Stepper",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Payment\" step in the stepper"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Payment\" step in the stepper"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Payment\" step in the stepper"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Donation stepper\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Payment\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "donation.stepper"
+    },
+    {
+        "id": "tc015",
+        "title": "Step numbering/indicators remain consistent after repeated navigation across steps",
+        "description": "Verifies repeated step switching does not duplicate steps or change the visible ordering of the three step indicators.",
+        "category": "Donation Stepper",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Personal Info\" step in the stepper"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Seva Selection\" step in the stepper"
+            },
+            {
+                "type": "action",
+                "description": "Click on \"Payment\" step in the stepper"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Step indicator 1 for donation stepper\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Step indicator 2 for donation stepper\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Step indicator 3 for donation stepper\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "donation.stepper"
+    },
+    {
+        "id": "tc016",
+        "title": "Validation prevents submission when required donor fields are missing",
+        "description": "Verifies the user cannot submit the donation form without completing required donor details.",
+        "category": "Donation Checkout (Stripe)",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "action",
+                "description": "Fill \"First name\" field with \"Neel\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Email\" field with \"neel@example.com\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Amount\" field with \"20\""
+            },
+            {
+                "type": "action",
+                "description": "Click on the \"Pay\" or \"Submit\" button"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Last name\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Phone\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Success\" is not visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc017",
+        "title": "Invalid email shows visible error and blocks submission",
+        "description": "Verifies an invalid email format is rejected via visible UI feedback and payment is not submitted.",
+        "category": "Donation Checkout (Stripe)",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "action",
+                "description": "Fill \"First name\" field with \"Kiran\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Last name\" field with \"Singh\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Email\" field with \"kiran@\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Phone\" field with \"5554447777\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Amount\" field with \"15\""
+            },
+            {
+                "type": "action",
+                "description": "Click on the \"Pay\" or \"Submit\" button"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Email\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"invalid\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc018",
+        "title": "Amount must be positive to proceed",
+        "description": "Verifies the UI blocks donation submission when amount is zero or negative.",
+        "category": "Donation Checkout (Stripe)",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /donation-page"
+            },
+            {
+                "type": "action",
+                "description": "Fill \"First name\" field with \"Anita\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Last name\" field with \"Gupta\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Email\" field with \"anita.gupta@example.com\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Phone\" field with \"5556669999\""
+            },
+            {
+                "type": "action",
+                "description": "Fill \"Amount\" field with \"0\""
+            },
+            {
+                "type": "action",
+                "description": "Click on the \"Pay\" or \"Submit\" button"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Amount\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"must be\" or \"greater than\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc019",
+        "title": "Select an allowed date and see the selected value reflected in the UI",
+        "description": "Verifies selecting a valid date is accepted and displayed as the chosen date.",
+        "category": "Pooja DatePicker",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click on the \"Date\" input"
+            },
+            {
+                "type": "action",
+                "description": "Type \"2026-03-15\" into the \"Date\" input"
+            },
+            {
+                "type": "action",
+                "description": "Press Enter"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"2026-03-15\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc020",
+        "title": "Attempt to enter a date earlier than the minimum and confirm validation error is shown",
+        "description": "Verifies the date picker enforces the minimum date constraint by blocking or flagging earlier dates.",
+        "category": "Pooja DatePicker",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click on the \"Date\" input"
+            },
+            {
+                "type": "action",
+                "description": "Type \"2026-03-30\" into the \"Date\" input"
+            },
+            {
+                "type": "action",
+                "description": "Press Enter"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"minimum\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"before\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc021",
+        "title": "Required date field: leaving it blank shows a required validation message on submit attempt",
+        "description": "Verifies required validation triggers when attempting to proceed without selecting a date.",
+        "category": "Pooja DatePicker",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Scroll to the primary call-to-action button used to continue booking"
+            },
+            {
+                "type": "action",
+                "description": "Click on the primary call-to-action button used to continue booking"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"required\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc022",
+        "title": "Typing an invalid date format is rejected or prompts a validation message",
+        "description": "Verifies the input does not accept non-YYYY-MM-DD values and provides visible feedback when invalid.",
+        "category": "Pooja DatePicker",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click on the \"Date\" input"
+            },
+            {
+                "type": "action",
+                "description": "Type \"03/15/2026\" into the \"Date\" input"
+            },
+            {
+                "type": "action",
+                "description": "Press Enter"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"invalid\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc023",
+        "title": "Clearing a previously selected date triggers required validation when attempting to proceed",
+        "description": "Verifies removing an existing selection is treated as empty and causes required validation on the booking flow.",
+        "category": "Pooja DatePicker",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click on the \"Date\" input"
+            },
+            {
+                "type": "action",
+                "description": "Type \"2026-03-15\" into the \"Date\" input"
+            },
+            {
+                "type": "action",
+                "description": "Press Enter"
+            },
+            {
+                "type": "action",
+                "description": "Type \"\" into the \"Date\" input"
+            },
+            {
+                "type": "action",
+                "description": "Click on the primary call-to-action button used to continue booking"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"required\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc024",
+        "title": "Book tickets with a valid future date and one registrant, then proceed to payment summary",
+        "description": "Verifies the happy path: user selects a future date, adds a registrant with required details, and reaches the payment summary view.",
+        "category": "Ticket Booking (Date & Registrant Selection)",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click on the date input (DatePicker) to open the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click on a future date in the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click the \"Add registrant\" button"
+            },
+            {
+                "type": "action",
+                "description": "Type \"Test Registrant\" into the registrant name field"
+            },
+            {
+                "type": "action",
+                "description": "Type \"9999999999\" into the registrant contact field"
+            },
+            {
+                "type": "action",
+                "description": "Click the \"Proceed to payment\" button"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Payment Summary\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc025",
+        "title": "Proceed to payment with date left empty shows 'Date is required' validation",
+        "description": "Verifies date validation prevents progression when no date is selected.",
+        "category": "Ticket Booking (Date & Registrant Selection)",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click the \"Proceed to payment\" button"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Date is required\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Payment Summary\" is not visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc026",
+        "title": "Attempt to proceed with a date selected but no registrants prevents payment summary",
+        "description": "Verifies that at least one registrant is required to proceed to payment.",
+        "category": "Ticket Booking (Date & Registrant Selection)",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click on the date input (DatePicker) to open the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click on a future date in the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click the \"Proceed to payment\" button"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Payment Summary\" is not visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Add registrant\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc027",
+        "title": "Registrant details entry persists after adding one registrant",
+        "description": "Verifies that a newly added registrant appears in the registrant list/section after filling details.",
+        "category": "Ticket Booking (Date & Registrant Selection)",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click on the date input (DatePicker) to open the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click on a future date in the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click the \"Add registrant\" button"
+            },
+            {
+                "type": "action",
+                "description": "Type \"Test Registrant\" into the registrant name field"
+            },
+            {
+                "type": "action",
+                "description": "Type \"9999999999\" into the registrant contact field"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Test Registrant\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc028",
+        "title": "Change selected date after adding a registrant and proceed to payment summary",
+        "description": "Verifies the user can modify the selected date and still proceed with an existing registrant.",
+        "category": "Ticket Booking (Date & Registrant Selection)",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click on the date input (DatePicker) to open the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click on a future date in the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click the \"Add registrant\" button"
+            },
+            {
+                "type": "action",
+                "description": "Type \"Test Registrant\" into the registrant name field"
+            },
+            {
+                "type": "action",
+                "description": "Type \"9999999999\" into the registrant contact field"
+            },
+            {
+                "type": "action",
+                "description": "Click on the date input (DatePicker) to open the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click on a different future date in the calendar"
+            },
+            {
+                "type": "action",
+                "description": "Click the \"Proceed to payment\" button"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Payment Summary\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc029",
+        "title": "DatePicker opens and allows selecting a future date (basic interaction check)",
+        "description": "Verifies the DatePicker UI can be opened and a future date selection is reflected on the page.",
+        "category": "Ticket Booking (Date & Registrant Selection)",
+        "priority": "p2",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /book-tickets"
+            },
+            {
+                "type": "action",
+                "description": "Click on the date input (DatePicker) to open the calendar"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"Calendar\" is visible"
+            },
+            {
+                "type": "action",
+                "description": "Click on a future date in the calendar"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify the selected date text is visible in the date field"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc030",
+        "title": "Puja Payment page loads and shows Registration section",
+        "description": "Verifies the Puja Payment page loads and the Registration section is visible.",
+        "category": "Puja Payment Page",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /puja-payment"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify URL contains \"/puja-payment\""
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Registration\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"registration section\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc031",
+        "title": "Puja Payment page loads and shows Sponsorship section",
+        "description": "Verifies the Puja Payment page loads and the Sponsorship section is visible.",
+        "category": "Puja Payment Page",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /puja-payment"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify URL contains \"/puja-payment\""
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Sponsorship\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"sponsorship section\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc032",
+        "title": "Registration and Sponsorship sections are both present on initial view",
+        "description": "Verifies both major blocks render together on the Puja Payment page.",
+        "category": "Puja Payment Page",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /puja-payment"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"registration section\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"sponsorship section\" is visible"
+            },
+            {
+                "type": "action",
+                "description": "Scroll to the bottom of the page"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"Sponsorship\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc033",
+        "title": "Registration section shows user-visible details when data is present (if available)",
+        "description": "Verifies the Registration section displays some registration details when booked puja data exists in the environment.",
+        "category": "Puja Payment Page",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /puja-payment"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"registration section\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"No registrations found\" is not visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"registration details\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc034",
+        "title": "Sponsorship section shows user-visible details when data is present (if available)",
+        "description": "Verifies the Sponsorship section displays some sponsorship details when booked puja data exists in the environment.",
+        "category": "Puja Payment Page",
+        "priority": "p1",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /puja-payment"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"sponsorship section\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"No sponsorships found\" is not visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"sponsorship details\" is visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc035",
+        "title": "Empty-state: Registration shows 'No registrations found' when no booked puja data is available (test setup required)",
+        "description": "Verifies the Registration section displays an empty-state message when there is no booked puja registration data.",
+        "category": "Puja Payment Page",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /puja-payment"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"registration section\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"No registrations found\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"registration details\" is not visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc036",
+        "title": "Empty-state: Sponsorship shows an empty-state message when no booked puja data is available (test setup required)",
+        "description": "Verifies the Sponsorship section displays an empty-state message when there is no booked puja sponsorship data.",
+        "category": "Puja Payment Page",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /puja-payment"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"sponsorship section\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"No sponsorships found\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"sponsorship details\" is not visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    },
+    {
+        "id": "tc037",
+        "title": "Empty-state: Both sections show appropriate empty states when no booked puja data exists (test setup required)",
+        "description": "Verifies both Registration and Sponsorship blocks communicate emptiness clearly when no booked puja data is available.",
+        "category": "Puja Payment Page",
+        "priority": "p0",
+        "steps": [
+            {
+                "type": "action",
+                "description": "Navigate to /puja-payment"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"No registrations found\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify text \"No sponsorships found\" is visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"registration details\" is not visible"
+            },
+            {
+                "type": "assertion",
+                "description": "Verify element \"sponsorship details\" is not visible"
+            }
+        ],
+        "repo_key": "repo2_radhakrishnatemple2_0",
+        "service_or_module": "general"
+    }
+]

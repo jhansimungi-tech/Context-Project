@@ -1,0 +1,38 @@
+[
+  {
+    "test_id": "tc038",
+    "repo_key": "repo1_jkyog_2_0",
+    "title": "View subscription details on Profile page",
+    "description": "Verifies subscription card with plan, status, next billing date on Profile.",
+    "status": "failed",
+    "failure_category": "env_issue",
+    "failure_reason": "Magic-link auth; automation cannot complete login",
+    "test_type": "frontend",
+    "created_at": "2026-02-19T22:30:00Z",
+    "modified_at": "2026-02-19T22:30:00Z"
+  },
+  {
+    "test_id": "tc044",
+    "repo_key": "repo1_jkyog_2_0",
+    "title": "Zoom meeting join page renders Zoom SDK",
+    "description": "Verifies Zoom SDK loads with valid meetingInfo in session storage.",
+    "status": "failed",
+    "failure_category": "env_issue",
+    "failure_reason": "Timeout navigating to /smex-live; app not on port 3002",
+    "test_type": "frontend",
+    "created_at": "2026-02-19T22:30:00Z",
+    "modified_at": "2026-02-19T22:30:00Z"
+  },
+  {
+    "test_id": "tc045",
+    "repo_key": "repo1_jkyog_2_0",
+    "title": "Zoom page shows error when meeting info missing",
+    "description": "Verifies error toast when meetingInfo absent.",
+    "status": "failed",
+    "failure_category": "env_issue",
+    "failure_reason": "Timeout; /smex-live did not load",
+    "test_type": "frontend",
+    "created_at": "2026-02-19T22:30:00Z",
+    "modified_at": "2026-02-19T22:30:00Z"
+  }
+]

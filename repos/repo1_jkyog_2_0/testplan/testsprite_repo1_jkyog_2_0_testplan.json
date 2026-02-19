@@ -1,0 +1,338 @@
+[
+    {
+        "id": "tc038",
+        "repo_key": "repo1_jkyog_2_0",
+        "service_or_module": "profile.subscription",
+        "title":  "View subscription details on Profile page (plan, status, next billing date)",
+        "description":  "Verifies an authenticated user can open the Profile page and see a subscription card with key details displayed.",
+        "category":  "Subscription Management (Profile)",
+        "priority":  "p0",
+        "steps":  [
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /login"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_USER}}\" into the email field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Login button"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify URL contains \"/profile\""
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Plan\" is visible"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Status\" is visible"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Next billing\" is visible"
+                      }
+                  ]
+    },
+    {
+        "id": "tc039",
+        "repo_key": "repo1_jkyog_2_0",
+        "service_or_module": "profile.subscription",
+        "title": "Open cancel subscription confirmation modal from subscription card",
+        "description":  "Verifies the cancel action on a subscription card opens a confirmation modal with expected content.",
+        "category":  "Subscription Management (Profile)",
+        "priority":  "p0",
+        "steps":  [
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /login"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_USER}}\" into the email field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Login button"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify URL contains \"/profile\""
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Cancel button on the subscription card"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Cancel\" is visible"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Are you sure\" is visible"
+                      }
+                  ]
+    },
+    {
+        "id": "tc040",
+        "repo_key": "repo1_jkyog_2_0",
+        "service_or_module": "profile.subscription",
+        "title":  "Dismiss cancel subscription modal without cancelling",
+        "description":  "Verifies a user can close the cancel confirmation modal and no visible subscription status change occurs.",
+        "category":  "Subscription Management (Profile)",
+        "priority":  "p1",
+        "steps":  [
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /login"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_USER}}\" into the email field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Login button"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Cancel button on the subscription card"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Are you sure\" is visible"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Close button in the cancellation modal"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Are you sure\" is not visible"
+                      }
+                  ]
+    },
+    {
+        "id": "tc041",
+        "repo_key": "repo1_jkyog_2_0",
+        "service_or_module": "profile.subscription",
+        "title": "Confirm cancellation and see subscription marked as Cancelled (happy path)",
+        "description":  "Verifies confirming cancellation results in a visible status update to Cancelled on the subscription card.",
+        "category":  "Subscription Management (Profile)",
+        "priority":  "p0",
+        "steps":  [
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /login"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_USER}}\" into the email field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Login button"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Cancel button on the subscription card"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Confirm button in the cancellation modal"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Cancelled\" is visible"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Status\" is visible"
+                      }
+                  ]
+    },
+    {
+        "id": "tc042",
+        "repo_key": "repo1_jkyog_2_0",
+        "service_or_module": "profile.subscription",
+        "title":  "Prevent duplicate cancellation submission while request is in progress",
+        "description":  "Verifies the confirmation action cannot be repeatedly submitted from the cancellation modal while processing is ongoing.",
+        "category":  "Subscription Management (Profile)",
+        "priority":  "p1",
+        "steps":  [
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /login"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_USER}}\" into the email field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Login button"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Cancel button on the subscription card"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Confirm button in the cancellation modal"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Processing\" is visible"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify element \"Confirm button in the cancellation modal\" is not visible"
+                      }
+                  ]
+    },
+    {
+        "id": "tc043",
+        "repo_key": "repo1_jkyog_2_0",
+        "service_or_module": "profile.subscription",
+        "title":  "Cancel button is not available after subscription is already Cancelled",
+        "description":  "Verifies that once the subscription shows Cancelled, the cancel action is no longer presented to the user.",
+        "category":  "Subscription Management (Profile)",
+        "priority":  "p1",
+        "steps":  [
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /login"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_USER}}\" into the email field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Login button"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Cancel button on the subscription card"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Confirm button in the cancellation modal"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Cancelled\" is visible"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify text \"Cancel\" is not visible"
+                      }
+                  ]
+    },
+    {
+        "id": "tc044",
+        "repo_key": "repo1_jkyog_2_0",
+        "service_or_module": "zoom.meeting_join",
+        "title":  "Zoom meeting join page renders Zoom SDK with valid meeting info",
+        "description":  "Verifies that navigating to the Zoom/SMEX live page with valid meetingNumber and signature from session storage loads the Zoom SDK container.",
+        "category":  "Zoom Meeting Join (1_JKYog_2.0)",
+        "priority":  "p0",
+        "steps":  [
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /login"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_USER}}\" into the email field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Login button"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Set session storage with valid meetingInfo (meetingNumber, signature, userName, userEmail, registrantToken, leaveUrl)"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /smex-live"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify Zoom SDK container element \"zmmtg-root\" becomes visible or Zoom meeting initializes"
+                      }
+                  ]
+    },
+    {
+        "id": "tc045",
+        "repo_key": "repo1_jkyog_2_0",
+        "service_or_module": "zoom.meeting_join",
+        "title":  "Zoom page shows error when meeting info is invalid or missing",
+        "description":  "Verifies that when meeting info is invalid or missing from session storage, an error state or message is displayed.",
+        "category":  "Zoom Meeting Join (1_JKYog_2.0)",
+        "priority":  "p0",
+        "steps":  [
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /login"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_USER}}\" into the email field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Click the Login button"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Clear session storage or set invalid meetingInfo"
+                      },
+                      {
+                          "type":  "action",
+                          "description":  "Navigate to /smex-live"
+                      },
+                      {
+                          "type":  "assertion",
+                          "description":  "Verify error toast \"Failed to join Zoom meeting\" or \"Failed to initialize Zoom\" is displayed, or page shows error/redirect state"
+                      }
+                  ]
+    }
+]
